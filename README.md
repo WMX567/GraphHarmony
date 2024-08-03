@@ -6,9 +6,6 @@ The official implementation of "Graph Harmony: Denoising and Nuclear-Norm Wasser
 * numpy==1.23.1
 * scikit_learn==1.1.2
 * torch==1.12.1
-* torch-geometric==2.1.0
-* torch-scatter==2.0.9
-* torch-sparse==0.6.15
 * torchvision==0.13.1
 
 ### Datasets
