@@ -29,11 +29,6 @@ Download the datasets and put them into a folder called data_folder.
 -src_data: The source dataset<br>
 -tar_data: The target dataset<br>
 
-<div style="page-break-after: always; visibility: hidden"> 
-\pagebreak 
-</div>
-
-
 ### Training with Our Method
 - Train on Ego-network dataset
 ```bash=
