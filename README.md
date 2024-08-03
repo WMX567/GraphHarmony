@@ -57,3 +57,15 @@ python run_ours_ir.py \
 ### Reference
 This repo is developed based on the codes provided by [GraphDA](https://github.com/rynewu224/GraphDA)
 
+### Citation
+
+If you find this repository useful, please kindly cite the following paper:
+
+```
+@article{wu2023graph,
+  title={Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data},
+  author={Wu, Mengxi and Rostami, Mohammad},
+  journal={arXiv preprint arXiv:2301.12361},
+  year={2023}
+}
+```
