@@ -55,7 +55,7 @@ def run(args):
     torch.cuda.manual_seed_all(seed)
     np.random.seed(seed)
     
-    model_path = 'OurBase_{}2{}_{}_{}.pth'.format(args.src_data, args.tar_data, args.backbone, str(args.r))
+    model_path = 'saved_models/OurBase_{}2{}_{}_{}.pth'.format(args.src_data, args.tar_data, args.backbone, str(args.r))
     
     # model definition
     model = Our_Base_noise(n_feat, args.enc_hidden_dim, args.m_dim, args.droprate,
