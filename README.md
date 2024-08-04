@@ -36,7 +36,7 @@ Download the datasets and put them into a folder called data_folder.
 ```bash=
 python run_ours.py \
 --backbone gat \
--r 0 \
+--r 0 \
 --data_path data_folder/infodata/data/ \ 
 --src_data digg --tar_data oag --device cuda 
 ```
@@ -45,7 +45,7 @@ python run_ours.py \
 ```bash=
 python run_ours_ir.py \
 --backbone gat \
--r 0 \
+--r 0 \
 --data_path data_folder/ \
 --src_data REDDIT-BINARY --tar_data IMDB-BINARY --device cuda
 ```

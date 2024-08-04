@@ -6,7 +6,7 @@ from .utils import *
 
 def Our_New_loss(res, labels, adj, domain, weights):
 
-    class_weight, beta, ent_weight, y_w, _ = weights
+    class_weight, beta, ent_weight, y_w, = weights
     rl = recons_loss(res['a_recons'], adj)
     
     kly = kl_loss(res['ymu'], res['ylv'])

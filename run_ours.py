@@ -37,8 +37,7 @@ def run(args):
     beta = torch.FloatTensor([args.beta]).to(device)
     ent_weight = torch.FloatTensor([args.ent_weight]).to(device)
     y_w = torch.FloatTensor([args.y_weight]).to(device)
-    m_w = torch.FloatTensor([args.m_weight]).to(device)
-    weights = [src_class_weight, beta, ent_weight, y_w, m_w]
+    weights = [src_class_weight, beta, ent_weight, y_w]
 
     gc.collect()
     tar_ds, _, _, tar_train_loader, tar_val_loader, _ = load_influence_dataset(
@@ -153,14 +152,8 @@ if __name__ == '__main__':
     parser.add_argument('--backbone', default='gat', help='Backbone Feature Extractor GNN. gcn / gat / gin')
     parser.add_argument('--enc_hidden_dim', type=int, default=256,
                         help='Dimension of the feature extractor hidden layer. Default is 256. ')
-    parser.add_argument('--d_dim', type=int, default=256,
-                        help='Dimension of the domain latent variables. Default is 64. ')
-    parser.add_argument('--y_dim', type=int, default=256,
-                        help='Dimension of the semantic latent variables. Default is 256. ')
     parser.add_argument('--m_dim', type=int, default=64,
-                        help='Dimension of the semantic latent variables. Default is 256. ')
-    parser.add_argument('--dec_hidden_dim', type=int, default=64,
-                        help='Dimension of the graph decoder hidden layer. Default is 64. ')
+                        help='Output dimension of decoder. ')
     parser.add_argument('--epoch', type=int, default=200)
     parser.add_argument('--droprate', type=float, default=0.5)
     parser.add_argument('--lr', type=float, default=0.01)
@@ -170,15 +163,13 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=1024)
     parser.add_argument('--patience', type=int, default=100)
     parser.add_argument('--shuffle', type=int, default=1)
-    parser.add_argument('-r', type=int, default=0)
+    parser.add_argument('--r', type=int, default=0)
     parser.add_argument('--train_ratio', type=float, default=0.75)
     parser.add_argument('--val_ratio', type=float, default=0.125)
     parser.add_argument('--recons_weight', type=float, default=1.0)
     parser.add_argument('--beta', type=float, default=1.0)
     parser.add_argument('--ent_weight', type=float, default=1.0)
-    parser.add_argument('--d_weight', type=float, default=1.0)
     parser.add_argument('--y_weight', type=float, default=1.0)
-    parser.add_argument('--m_weight', type=float, default=1.0)
     parser.add_argument('--check_batch', type=float, default=1)
     parser.add_argument('--validate_batch', type=float, default=1)
     parser.add_argument('--lr_decay_epoch', type=int, default=30)
