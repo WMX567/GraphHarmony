@@ -27,7 +27,9 @@ Download the datasets and put them into a folder called data_folder.
 -r: The random seed = r + 27<br>
 -data_path: The folder contains data files<br>
 -src_data: The source dataset<br>
--tar_data: The target dataset<br>
+-tar_data: The target dataset<be>
+
+**For the hyperparameter settings, please refer to the argument values.**
 
 ### Training with Our Method
 - Train on Ego-network dataset
