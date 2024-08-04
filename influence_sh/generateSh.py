@@ -33,3 +33,19 @@ for j, folder_name in enumerate(folder_names):
                 + ' --device cuda\n')
 
 f.close()
+
+with open(file_name, 'w') as f:
+    f.write('#!/bin/bash\n')
+    f.write('#SBATCH --partition=main\n')
+    f.write('#SBATCH --nodes=1\n')
+    f.write('#SBATCH --ntasks=1\n')
+    f.write('#SBATCH --cpus-per-task=4\n')
+    f.write('#SBATCH --time=00:05:00\n')
+    f.write('#SBATCH --output='+pair+str(i)+'_'+str(j)+'.out'+'\n')
+    f.write('\n\n\n\n')
+
+    for j, folder_name in enumerate(folder_names):
+        for pair in pair_names:
+            for i in range(5):
+                f.write(pair+str(i)+'_'+str(j)+'.sh\n')
+f.close()
