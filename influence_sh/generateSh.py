@@ -1,5 +1,4 @@
-folder_names = ['diva', 'dsr', 'our', 'dann', 'mdd', 'dgda', 'tuning', 'cdan', 'daln', 
-                'biwaa', 'toalign','hda', 'source','gvb']
+folder_names = ['our']
 pair_names = ['ot','ow','od','to','tw','td','wo','wt','wd','do','dt','dw']
 dataset_dict = {'do':['digg', 'oag'],'dt':['digg','twitter'],
 'dw':['digg', 'weibo'],'od':['oag','digg'],'ot':['oag','twitter'],
