@@ -28,7 +28,7 @@ for j, folder_name in enumerate(folder_names):
                 f.write('\n\n\n\n')
 
                 f.write('python /scratch1/mengxiwu/GraphHarmony/'+file_names[j]+
-                ' --backbone gat -r '+str(i)+' --data_path /scratch1/mengxiwu/GraphHarmony/infodata/data/'+ 
+                ' --backbone gat --r '+str(i)+' --data_path /scratch1/mengxiwu/GraphHarmony/infodata/data/'+ 
                 ' --src_data '+ dataset_dict[pair][0] + ' --tar_data '+ dataset_dict[pair][1]
                 + ' --device cuda\n')
 
