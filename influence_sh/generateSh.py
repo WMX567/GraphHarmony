@@ -48,5 +48,5 @@ with open(foldername, 'w') as f:
     for j, folder_name in enumerate(folder_names):
         for pair in pair_names:
             for i in range(5):
-                f.write('our/'+pair+str(i)+'_'+str(j)+'.sh\n')
+                f.write('sbatch our/'+pair+str(i)+'_'+str(j)+'.sh\n')
 f.close()
