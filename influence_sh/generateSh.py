@@ -5,10 +5,7 @@ dataset_dict = {'do':['digg', 'oag'],'dt':['digg','twitter'],
 'ow':['oag','weibo'],'td':['twitter','digg'],'to':['twitter','oag'],
 'tw':['twitter','weibo'],'wd':['weibo','digg'],
 'wo':['weibo','oag'],'wt':['weibo','twitter']}
-file_names = ['run_diva.py', 'run_dsr.py', 'run_ours.py', 
-'run_dann.py', 'run_mdd.py', 'run_dgda.py','run_tuning.py', 
-'run_cdan_mcc_sdat.py', 'run_daln.py', 'run_biwaa.py', 
-'run_toalign.py','run_hda.py', 'run_source_only.py', 'run_gvb.py']
+file_names = ['run_ours.py']
 
 for j, folder_name in enumerate(folder_names):
     for pair in pair_names:
