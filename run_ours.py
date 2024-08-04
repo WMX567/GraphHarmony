@@ -103,7 +103,7 @@ def run(args):
         s_out = model(s_feats, s_vts, s_adj, 0)
         t_out = model(t_feats, t_vts, t_adj, 1)
         src_tr_loss = Our_New_loss(s_out, s_labels, s_adj.clone(), 0, weights)
-        tar_tr_loss = Our_New_loss(t_out, None, t_adj.clone(), 1, weights, target_loss_w=0.001)
+        tar_tr_loss = Our_New_loss(t_out, None, t_adj.clone(), 1, weights)
         tr_loss = src_tr_loss + tar_tr_loss
         x = torch.cat((s_out['emb'], t_out['emb']), dim=0)
         transfer_loss = -discrepancy(x)
