@@ -42,7 +42,7 @@ with open(file_name, 'w') as f:
     f.write('#SBATCH --ntasks=1\n')
     f.write('#SBATCH --cpus-per-task=4\n')
     f.write('#SBATCH --time=00:05:00\n')
-    f.write('#SBATCH --output='+pair+str(i)+'_'+str(j)+'.out'+'\n')
+    f.write('#SBATCH --output=our.out'+'\n')
     f.write('\n\n\n\n')
 
     for j, folder_name in enumerate(folder_names):
