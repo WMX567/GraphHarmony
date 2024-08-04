@@ -34,7 +34,7 @@ for j, folder_name in enumerate(folder_names):
 
 f.close()
 
-filename = folder_names[0]
+filename = folder_names[0]+".sh"
 with open(file_name, 'w') as f:
     f.write('#!/bin/bash\n')
     f.write('#SBATCH --partition=main\n')
