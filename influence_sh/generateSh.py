@@ -7,35 +7,35 @@ dataset_dict = {'do':['digg', 'oag'],'dt':['digg','twitter'],
 'wo':['weibo','oag'],'wt':['weibo','twitter']}
 file_names = ['run_ours.py']
 
-for j, folder_name in enumerate(folder_names):
-    for pair in pair_names:
-        for i in range(5):
-            file_name = folder_name + '/'+pair+str(i)+'_'+str(j)+'.sh'
-            with open(file_name, 'w') as f:
-                f.write('#!/bin/bash\n')
-                f.write('#SBATCH --partition=gpu\n')
-                f.write('#SBATCH --gres=gpu:p100:1\n')
-                f.write('#SBATCH --nodes=1\n')
-                f.write('#SBATCH --ntasks=1\n')
-                f.write('#SBATCH --cpus-per-task=4\n')
-                f.write('#SBATCH --mem=32GB\n')
-                f.write('#SBATCH --time=2:00:00\n')
-                f.write('#SBATCH --output='+pair+str(i)+'_'+str(j)+'.out'+'\n')
-                f.write('\n\n\n\n')
-                f.write('module purge\n')
-                f.write('eval "$(conda shell.bash hook)"\n')
-                f.write('conda activate pyCLGL\n')
-                f.write('\n\n\n\n')
+# for j, folder_name in enumerate(folder_names):
+#     for pair in pair_names:
+#         for i in range(5):
+#             file_name = folder_name + '/'+pair+str(i)+'_'+str(j)+'.sh'
+#             with open(file_name, 'w') as f:
+#                 f.write('#!/bin/bash\n')
+#                 f.write('#SBATCH --partition=gpu\n')
+#                 f.write('#SBATCH --gres=gpu:p100:1\n')
+#                 f.write('#SBATCH --nodes=1\n')
+#                 f.write('#SBATCH --ntasks=1\n')
+#                 f.write('#SBATCH --cpus-per-task=4\n')
+#                 f.write('#SBATCH --mem=32GB\n')
+#                 f.write('#SBATCH --time=2:00:00\n')
+#                 f.write('#SBATCH --output='+pair+str(i)+'_'+str(j)+'.out'+'\n')
+#                 f.write('\n\n\n\n')
+#                 f.write('module purge\n')
+#                 f.write('eval "$(conda shell.bash hook)"\n')
+#                 f.write('conda activate pyCLGL\n')
+#                 f.write('\n\n\n\n')
 
-                f.write('python /scratch1/mengxiwu/GraphHarmony/'+file_names[j]+
-                ' --backbone gat --r '+str(i)+' --data_path /scratch1/mengxiwu/GraphHarmony/infodata/data/'+ 
-                ' --src_data '+ dataset_dict[pair][0] + ' --tar_data '+ dataset_dict[pair][1]
-                + ' --device cuda\n')
+#                 f.write('python /scratch1/mengxiwu/GraphHarmony/'+file_names[j]+
+#                 ' --backbone gat --r '+str(i)+' --data_path /scratch1/mengxiwu/GraphHarmony/infodata/data/'+ 
+#                 ' --src_data '+ dataset_dict[pair][0] + ' --tar_data '+ dataset_dict[pair][1]
+#                 + ' --device cuda\n')
 
-f.close()
+# f.close()
 
-filename = folder_names[0]+".sh"
-with open(file_name, 'w') as f:
+foldername = folder_names[0]+".sh"
+with open(foldername, 'w') as f:
     f.write('#!/bin/bash\n')
     f.write('#SBATCH --partition=main\n')
     f.write('#SBATCH --nodes=1\n')
