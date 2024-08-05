@@ -158,7 +158,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr_decay_rate', type=float, default=0.75)
     parser.add_argument('--weight_decay', type=float, default=5e-4)
     parser.add_argument('--batch_size', type=int, default=1)
-    parser.add_argument('--real_batch_size', type=int, default=32)
+    parser.add_argument('--real_batch_size', type=int, default=64)
     parser.add_argument('--patience', type=int, default=50)
     parser.add_argument('--shuffle', type=int, default=1)
     parser.add_argument('--r', type=int, default=0)
