@@ -10,11 +10,11 @@ The official implementation of "Graph Harmony: Denoising and Nuclear-Norm Wasser
 * torch==1.12.1
 
 ### Datasets
-The Ego-network dataset with 4 domains: OAG, Digg, Twitter, and Weibo
+The Ego-network dataset with 4 domains: OAG, Digg, Twitter, and Weibo.
 * [Raw Ego-network dataset](https://github.com/xptree/DeepInf)
 * [Processed Ego-network dataset](https://drive.google.com/drive/folders/1Kvd46c1TtbuL3-svUC2fkjPnwMOXy8wH?usp=sharing)
 
-The IMDB&Reddit dataset with 2 domains: IMDB-Binary and Reddit-Binary
+The IMDB&Reddit dataset with 2 domains: IMDB-Binary and Reddit-Binary.
 * [Raw IMDB-Binary dataset](https://networkrepository.com/IMDB-BINARY.zip)
 * [Raw Reddit-Binary dataset](https://networkrepository.com/REDDIT-BINARY.zip)
 * [Processed IMDB-Binary dataset](https://drive.google.com/drive/folders/1Kvd46c1TtbuL3-svUC2fkjPnwMOXy8wH?usp=sharing)
