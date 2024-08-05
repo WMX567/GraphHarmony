@@ -1,5 +1,7 @@
 ## Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data
-The official implementation of ["Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data", TMLR 2024](https://openreview.net/forum?id=CSv7GgKHb6).
+The official implementation of "Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data", TMLR 2024.
+
+[Paper](https://openreview.net/forum?id=CSv7GgKHb6)
 
 ### Requirements
 * python==3.9
