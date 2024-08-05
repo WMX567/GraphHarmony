@@ -102,8 +102,8 @@ def run(args):
         optimizer.zero_grad()
         s_out = model(s_feats, s_vts, s_adj, 0)
         t_out = model(t_feats, t_vts, t_adj, 1)
-        src_tr_loss = Our_New_loss(s_out, s_labels, s_adj.clone(), 0, weights)
-        tar_tr_loss = Our_New_loss(t_out, None, t_adj.clone(), 1, weights)
+        src_tr_loss = Our_New_loss(s_out, s_labels, s_adj.clone(), 0, weights, entropy=True)
+        tar_tr_loss = Our_New_loss(t_out, None, t_adj.clone(), 1, weights, entropy=True)
         tr_loss = src_tr_loss + tar_tr_loss
         x = torch.cat((s_out['emb'], t_out['emb']), dim=0)
         transfer_loss = -discrepancy(x)
@@ -118,8 +118,8 @@ def run(args):
         optimizer.zero_grad()
         s_out = model(s_feats, s_vts, s_nadj, 0)
         t_out = model(t_feats, t_vts, t_nadj, 1)
-        s_mn_loss = Our_New_loss(s_out, s_labels, s_adj.clone(), 0, weights)
-        t_mn_loss = Our_New_loss(t_out, t_labels, t_adj.clone(), 1, weights)
+        s_mn_loss = Our_New_loss(s_out, s_labels, s_adj.clone(), 0, weights, entropy=True)
+        t_mn_loss = Our_New_loss(t_out, t_labels, t_adj.clone(), 1, weights, entropy=True)
         aug_tr_loss = s_mn_loss + t_mn_loss
         x = torch.cat((s_out['emb'], t_out['emb']), dim=0)
         aug_transfer_loss = -discrepancy(x)
