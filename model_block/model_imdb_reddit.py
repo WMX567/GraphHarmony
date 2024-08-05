@@ -37,26 +37,6 @@ class GNN_Encoder_noise(nn.Module):
         return res
 
 
-class GraphDecoder(nn.Module):
-    def __init__(self, dec_hs, dim_d, dim_y, dim_m, droprate):
-        super(GraphDecoder, self).__init__()
-        self.d_lin0 = nn.Linear(dim_d, dim_d)
-        self.y_lin0 = nn.Linear(dim_y, dim_y)
-        self.m_lin0 = nn.Linear(dim_m, dim_m)
-        self.dym_lin1 = nn.Linear(dim_d + dim_y + dim_m, dec_hs)
-        self.dropout = nn.Dropout(droprate)
-        self.act = nn.ReLU()
-
-    def forward(self, d, y, m):
-        d = self.dropout(self.act(self.d_lin0(d)))
-        y = self.dropout(self.act(self.y_lin0(y)))
-        m = self.dropout(self.act(self.m_lin0(m)))
-        dym = torch.cat([d, y, m], dim=-1)
-        dym = self.dym_lin1(dym)
-        adj_recons = torch.bmm(dym, dym.permute(0, 2, 1))
-        return adj_recons
-    
-
 class GraphDecoderOur(nn.Module):
     def __init__(self, dec_hs, dim_y, droprate):
         super(GraphDecoderOur, self).__init__()
@@ -99,7 +79,7 @@ class Our_Base_noise(nn.Module):
         self.tvf.weight = Parameter(target_vertex_feats, requires_grad = False)
         in_dim = int(source_vertex_feats.size(1))
 
-        self.encoder = GNN_Encoder_noise(in_dim, hs, m_dim, dp, backbone)
+        self.encoder = GNN_Encoder_noise(in_dim, hs, dp, backbone)
         self.classClassifier = ClassClassifier(hs, 2, dp)
         self.graph_decoder = GraphDecoderOur(m_dim, hs, dp)
 
