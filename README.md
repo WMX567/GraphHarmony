@@ -1,5 +1,5 @@
 ## Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data
-The official implementation of "Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data", TMLR 2024.
+The official implementation of "Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data", TMLR 2024. 
 
 [Paper](https://openreview.net/forum?id=CSv7GgKHb6)
 
@@ -54,7 +54,7 @@ python run_ours_ir.py \
 
 
 ### Reference
-This repo is developed based on the codes provided by [GraphDA](https://github.com/rynewu224/GraphDA)
+This repo is developed based on the codes provided by [GraphDA](https://github.com/rynewu224/GraphDA).
 
 ### Citation
 
