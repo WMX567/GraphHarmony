@@ -174,7 +174,7 @@ if __name__ == '__main__':
     parser.add_argument('--manipulate_batch', type=int, default=1)
     parser.add_argument('--edge_add_rate', type=float, default=0.1)
     parser.add_argument('--edge_drop_rate', type=float, default=0.1)
-    parser.add_argument('--num_workers', type=int, default=4)
+    parser.add_argument('--num_workers', type=int, default=0)
     parser.add_argument('--device', type=str, default="cpu")
     args = parser.parse_args()
     
