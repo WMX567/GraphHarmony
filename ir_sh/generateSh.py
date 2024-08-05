@@ -42,7 +42,7 @@ for j, folder_name in enumerate(folder_names):
         f.write('\n\n')
         f.write('module purge\n')
         f.write('eval "$(conda shell.bash hook)"\n')
-        f.write('conda activate py39\n')
+        f.write('conda activate pyCLGL\n')
         f.write('\n\n')
         for pair in pair_names:
             for i in range(5):
@@ -63,7 +63,7 @@ with open('test.sh', 'w') as f:
     f.write('\n\n')
     f.write('module purge\n')
     f.write('eval "$(conda shell.bash hook)"\n')
-    f.write('conda activate py39\n')
+    f.write('conda activate pyCLGL\n')
     f.write('\n\n')
     for j, folder_name in enumerate(folder_names):
         for pair in pair_names:
