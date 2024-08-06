@@ -34,7 +34,7 @@ Download the datasets and put them into a folder called data_folder.
 
 **For the hyperparameter settings, please refer to the argument values.**
 
-### Training with Our Method
+### Examples of Training with Our Method
 - Train on Ego-network dataset
 ```bash=
 python run_ours.py \
