@@ -62,10 +62,14 @@ This repo is developed based on the codes provided by [GraphDA](https://github.c
 If you find this repository useful, please kindly cite the following paper:
 
 ```
-@article{wu2023graph,
-  title={Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data},
-  author={Wu, Mengxi and Rostami, Mohammad},
-  journal={arXiv preprint arXiv:2301.12361},
-  year={2023}
+@article{
+wu2024graph,
+title={Graph Harmony: Denoising and Nuclear-Norm Wasserstein Adaptation for Enhanced Domain Transfer in Graph-Structured Data},
+author={Mengxi Wu and Mohammad Rostami},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2024},
+url={https://openreview.net/forum?id=CSv7GgKHb6},
+note={}
 }
 ```
