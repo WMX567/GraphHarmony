@@ -40,7 +40,7 @@ Download the datasets and put them into a folder called data_folder.
 python run_dnan.py \
 --backbone gat \
 --r 0 \
---data_path data_folder/ \ 
+--data_path data_folder/data \ 
 --src_data digg --tar_data oag --device cuda 
 ```
 
