@@ -8,6 +8,7 @@ The official implementation of "Graph Harmony: Denoising and Nuclear-Norm Wasser
 * numpy==1.23.1
 * scikit_learn==1.1.2
 * torch==1.12.1
+* A100 GPU
 
 ### Datasets
 The Ego-network dataset with 4 domains: OAG, Digg, Twitter, and Weibo.
