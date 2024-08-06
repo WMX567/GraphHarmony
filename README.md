@@ -37,7 +37,7 @@ Download the datasets and put them into a folder called data_folder.
 ### Examples of Training with Our Method
 - Train on Ego-network dataset
 ```bash=
-python run_ours.py \
+python run_dnan.py \
 --backbone gat \
 --r 0 \
 --data_path data_folder/infodata/data/ \ 
@@ -46,7 +46,7 @@ python run_ours.py \
 
 - Train on IMDB&Reddit dataset
 ```bash=
-python run_ours_ir.py \
+python run_dnan_ir.py \
 --backbone gat \
 --r 0 \
 --data_path data_folder/ \
