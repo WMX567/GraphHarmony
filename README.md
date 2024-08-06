@@ -27,7 +27,7 @@ Download the datasets and put them into a folder called data_folder.
 
 ### Arguments
 -backbone: Feature Extractor <br>
--r: The random seed = r + 27<br>
+-r: The random seed = r + 27 (0,1,2,3,4)<br>
 -data_path: The folder contains data files<br>
 -src_data: The source dataset<br>
 -tar_data: The target dataset<be>
